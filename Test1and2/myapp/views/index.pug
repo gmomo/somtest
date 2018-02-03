@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  p Hello World
+  form(method='POST' action='')
+   input(type= "text" name="integer")
+   button.btn.btn-primary(type='submit') Submit
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg
